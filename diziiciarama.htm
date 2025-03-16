@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Diziler Metotları</title>
+    </head>
+    <body>
+        <p id="p_ekran"></p>
+        <script>
+            var markalar = ["Asus","Toshiba","Huawei","HP"];
+            var sayilar = [45,85,2,-3,45,90,30];
+            console.log("-*-* Index Of *-*-");
+            console.log(markalar.indexOf("Toshiba"));
+            console.log(markalar.indexOf("Murtaza"));
+            console.log("-*-* Include *-*-");
+            console.log(markalar.includes("Murtaza"));
+            console.log("-*-* Find *-*-");
+            console.log(sayilar.find(ara));
+            console.log(sayilar.findIndex(ara));
+            console.log(sayilar.findLast(ara));
+            console.log(sayilar.findLast(x=> x > 50 ));
+            function ara(value,i,a)
+            {
+                return value > 50;
+            }
+        </script>
+    </body>
+</html>

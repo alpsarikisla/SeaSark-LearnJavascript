@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Diziler Metotları</title>
+    </head>
+    <body>
+        <button type="button" onclick="sirala()">Sırala</button>
+        <p id="p_ekran"></p>
+        <script>
+            var markalar = ["Asus","Toshiba","Huawei","HP"];
+            var sayilar = [45,85,2,-3,45,90,30];
+            document.getElementById("p_ekran").innerHTML = sayilar
+            //console.log("-*-* Sort *-*-")
+            //markalar.sort();
+            //sayilar.sort();
+            //console.log(markalar);
+            //console.log(sayilar);
+
+            //console.log("-*-* Reverse *-*-")
+            //markalar.reverse();
+            //sayilar.reverse();
+            //console.log(markalar);
+            //console.log(sayilar);
+            function sirala(){
+                sayilar.sort();
+                document.getElementById("p_ekran").innerHTML = sayilar
+            }
+
+        </script>
+    </body>
+</html>

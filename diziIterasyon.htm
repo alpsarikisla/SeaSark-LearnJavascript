@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>Diziler Metotları</title>
+    </head>
+    <body>
+
+        <p id="p_ekran"></p>
+        <ul id="ul_liste"></ul>
+        <label id="lbl_toplam"></label>
+        <script>
+            var markalar = ["Asus","Toshiba","Huawei","HP"];
+            var sayilar = [45,85,2,-3,45,90,30];
+            var liste ="";
+            markalar.forEach(listele);
+            document.getElementById("ul_liste").innerHTML = liste;
+            function listele(value, index, array){
+                liste+= "<li>"+value+"</li>"
+            }
+
+            var filtreli = sayilar.filter(filtrele)
+            function filtrele(v,i,a){
+                return v > 15;
+            }
+            document.getElementById("p_ekran").innerHTML = filtreli;
+
+            var toplam = sayilar.reduce(topla);
+            function topla(total, value)
+            {
+                return total + value;
+            }
+            document.getElementById("lbl_toplam").innerText= toplam;
+
+            var tumuBuyukMu = sayilar.every(buyukmu);
+            var herhangibirBuyukMu = sayilar.some(buyukmu);
+            function buyukmu(v,i,a)
+            {
+                return v > 1500;
+            }
+            console.log(tumuBuyukMu);
+            console.log(herhangibirBuyukMu);
+
+            //-*-*-* Sabit Değişken *-*-*-
+            const pisayi = 3.14;
+            pisayi = 5;
+            console.log(pisayi);
+        </script>
+    </body>
+</html>

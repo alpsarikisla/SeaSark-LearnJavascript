@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>Operatörler</title>
+    </head>
+    <body>
+       <label id="lbl_sonuc"></label>
+       <script>
+        var s1 = 2;
+        var s2 = 5;
+        var toplam = s1 + s2;
+        document.getElementById("lbl_sonuc").innerText="Toplam = " + toplam;
+        console.log("Toplam = " + toplam);
+
+        var fark = s1 - s2;
+        console.log("Fark = " + fark);
+
+        var carpim = s1 * s2;
+        console.log("Çarpım = " + carpim);
+
+        var bolum = s1 / s2;
+        console.log("Bölüm = " + bolum);
+        
+        var us = s1 ** s2;
+        console.log("Üs = " + us)
+
+        var mod = s2 % s1;
+        console.log("Mod = " + mod)
+
+        s1++;
+        console.log("Arttırma = " + s1)
+
+        s1--;
+        console.log("Eksiltme = " + s1)
+
+        s1 += 10;
+        console.log("Arttır ata = " + s1)
+
+        s1 -= 10;
+        console.log("Eksilt ata = " + s1)
+
+        s1 *= 10;
+        console.log("Çarp ata = " + s1)
+
+        s1 /= 10;
+        console.log("Böl ata = " + s1)
+
+        s1 %= 10;
+        console.log("ModAl ata = " + s1)
+
+        s1 **= 10;
+        console.log("Üs Al ata = " + s1)
+       </script>
+    </body>
+</html>

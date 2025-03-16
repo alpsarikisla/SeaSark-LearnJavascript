@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>Diziler Metotları</title>
+    </head>
+    <body>
+        <p id="p_ekran"></p>
+       <script>
+             var markalar = ["Asus","Toshiba","Huawei","HP"];
+             var elemansayi = markalar.length;
+             console.log(elemansayi);
+
+             console.log(markalar[2]);
+             console.log(markalar.at(2));//Önerilmez
+
+
+             document.getElementById("p_ekran").innerHTML = markalar.join(" - ");
+
+             markalar.push("Monster");
+             console.log(markalar);
+
+             var sehirler = ["Eskişehir","izmir","İstanbul"];
+            
+             console.log("---Karıştırıldı---")
+             var karisim = markalar.concat(sehirler);
+             console.log(karisim)
+            
+             //console.log("---Kopyalandı---")
+             //console.log(markalar);
+             //markalar.copyWithin(2,0);
+             //console.log(markalar);
+
+             //console.log("---Sıralandı---")
+             //markalar.sort();
+             //console.log(markalar);
+
+             //console.log("---Çoklu silme---")
+             //markalar.splice(0,2);
+             //console.log(markalar);
+
+             console.log("---Ayırma---")
+             var yeni =  markalar.slice(1);
+             var yeni2 =  markalar.slice(1,3);
+             console.log(yeni);
+             console.log(yeni2);
+       </script>
+    </body>
+</html>

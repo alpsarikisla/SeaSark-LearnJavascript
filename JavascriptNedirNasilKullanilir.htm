@@ -1,0 +1,22 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h3>JavaScript Kullannıyorum</h3>
+        <label id="lbl_murtaza"></label>
+        <p>innerHTML Etiketin içi anlamında kullanılır</p>
+
+        <button id="btn_degistir" type="button" onclick="degistir()">Tıklayınız</button>
+        <button id="btn_disminnaklar" type="button" onclick="disaridanMudahale()">Dışarıdan Müdahale</button>
+        <script src="js/ilkdosyam.js"></script>
+        <script>
+            document.getElementById("lbl_murtaza").innerHTML = "Javascript İle Oluşturulan Murtaza";
+            function degistir()
+            {
+                document.getElementById("lbl_murtaza").innerHTML = "Buton ile gönderildim";
+                document.getElementById("btn_degistir").innerHTML = "Tıkladınız";
+            }
+        </script>
+    </body>
+</html>
