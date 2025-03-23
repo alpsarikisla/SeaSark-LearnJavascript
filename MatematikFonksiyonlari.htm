@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>Math Kullanımı</title>
+    </head>
+    <body>
+       <label id="lbl_sonuc"></label>
+       <script>
+            //Round => yuvarla
+             document.getElementById("lbl_sonuc").innerHTML = 4.6;
+             document.getElementById("lbl_sonuc").innerHTML = Math.round(4.6);
+             document.getElementById("lbl_sonuc").innerHTML = Math.round(4.5);
+             document.getElementById("lbl_sonuc").innerHTML = Math.round(4.4);
+             document.getElementById("lbl_sonuc").innerHTML = Math.round(4.6);
+
+             //Ceil => yukarı yuvarla
+             document.getElementById("lbl_sonuc").innerHTML = Math.ceil(4.1);
+
+             //floor => aşağı yuvarla
+             document.getElementById("lbl_sonuc").innerHTML = Math.floor(4.9);
+
+              //trunc => Tamsayı kısmını al
+              document.getElementById("lbl_sonuc").innerHTML = Math.trunc(4.9);
+
+              //sign => işareti al
+              document.getElementById("lbl_sonuc").innerHTML = Math.sign(-7);
+
+              //pow => kuvvet al
+              document.getElementById("lbl_sonuc").innerHTML = Math.pow(5,3);
+
+              //sqrt => kare kök al
+              document.getElementById("lbl_sonuc").innerHTML = Math.sqrt(25);
+
+              //abs => mutlak değer al
+              document.getElementById("lbl_sonuc").innerHTML = Math.abs(-7);
+
+              //sin => 
+              document.getElementById("lbl_sonuc").innerHTML = Math.sin(90 * Math.PI / 180);
+
+              //cos => 
+              document.getElementById("lbl_sonuc").innerHTML = Math.cos(0 * Math.PI / 180);
+
+              //Min =>
+              document.getElementById("lbl_sonuc").innerHTML = Math.min(0, -15, 3,7,45,7000962)
+
+              //Max =>
+              document.getElementById("lbl_sonuc").innerHTML = Math.max(0, -15, 3,7,45,7000962)
+
+              //Random
+              document.getElementById("lbl_sonuc").innerHTML = Math.round(Math.random() * 10)
+       </script>
+    </body>
+</html>

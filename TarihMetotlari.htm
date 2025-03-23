@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>Tarih Kullanımı</title>
+    </head>
+    <body>
+       <label id="lbl_sonuc"></label>
+       <script>
+            //Get
+            var tarih = new Date();
+            document.getElementById("lbl_sonuc").innerHTML ="Yıl = " + tarih.getFullYear();
+            document.getElementById("lbl_sonuc").innerHTML ="Ay = " +   (tarih.getMonth() + 1);
+            var aylar = ["Ocak","Şubat","Mart","Nisan","Mayıs","Haziran","Temmuz","Ağustos","Eylül","Ekim","Kasım","Aralık"];
+            document.getElementById("lbl_sonuc").innerHTML ="Ay = " +   aylar[tarih.getMonth()];
+            document.getElementById("lbl_sonuc").innerHTML = "Gün = " + tarih.getDate();
+            document.getElementById("lbl_sonuc").innerHTML = "Saat = " + tarih.getHours();
+            document.getElementById("lbl_sonuc").innerHTML = "Dakika = " + tarih.getMinutes();
+            document.getElementById("lbl_sonuc").innerHTML = "Saniye = " + tarih.getSeconds();
+            var gunler = ["pazar","Pazartesi","Salı","Çarşamba","Perşembe","Cuma","Cumartesi"]
+            document.getElementById("lbl_sonuc").innerHTML = "Gün = " + tarih.getDay();
+            document.getElementById("lbl_sonuc").innerHTML = "Gün = " + gunler[tarih.getDay()];
+            document.getElementById("lbl_sonuc").innerHTML = "Zaman Farkı Dakika = " + tarih.getTimezoneOffset();
+
+            //Set
+            var tarih2 = new Date();
+            tarih2.setFullYear(2027);
+            tarih2.setMonth(11);
+            tarih2.setDate(2)
+
+            var tarih3= new Date();
+            tarih3.setDate(tarih3.getDate() + 50);
+            document.getElementById("lbl_sonuc").innerHTML = tarih3;
+
+            //setHours(), setMinutes(), setSeconds()
+
+            var bugun = new Date();
+            var birgun = new Date();
+            birgun.setFullYear(2028,2,22);
+            var mesaj = "";
+            if (birgun > bugun)
+            {
+                mesaj = "Bu gün büyüktür, Naber Müdür";
+            }
+            else
+            {
+                mesaj = "bir gün bu günden büyük";
+            }
+            
+            document.getElementById("lbl_sonuc").innerHTML = mesaj;
+       </script>
+    </body>
+</html>
