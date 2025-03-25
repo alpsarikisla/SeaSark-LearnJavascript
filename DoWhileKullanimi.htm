@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Döngüsü</title>
+</head>
+<body>
+    <label id="lbl_sonuc"></label><br>
+    <script>
+        var satir ="";
+        var index = 0;
+
+        do{
+            satir += "İndex Değeri = " + index + "<br/>";
+            index++;
+        }
+        while(index < 10);
+        document.getElementById("lbl_sonuc").innerHTML = satir;
+    </script>
+</body>
+</html>

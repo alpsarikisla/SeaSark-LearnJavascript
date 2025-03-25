@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Switch Kullanımı</title>
+    </head>
+    <body>
+        <label id="lbl_sonuc"></label><br>
+        <script>
+        var gemiler = ["HMS Hood", "Tirpitz", "Bismark", "Yamato", "Hayete"];
+        var satir = "";
+        for (var i = 0; i < gemiler.length; i++)
+        {
+            satir += gemiler[i] + "<br>";
+        }
+        document.getElementById("lbl_sonuc").innerHTML = satir;
+        </script>
+    </body>
+</html>

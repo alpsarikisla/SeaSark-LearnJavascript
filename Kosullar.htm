@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Koşullar</title>
+    </head>
+    <body>
+        <label id="lbl_sonuc"></label><br>
+        <script>
+          var saat = new Date().getHours();
+          var sonuc = "";
+          if(saat < 12)
+          {
+            sonuc ="Saat " + saat+ " Günaydın";
+          }
+          else if(saat < 18)
+          {
+            sonuc = "Saat " + saat+ "Tünaydın";
+          }
+          else if (saat < 22)
+          {
+            sonuc = "Saat " + saat+ "İyi Akşamlar";
+          }
+          else
+          {
+            sonuc = "Saat " + saat+ "İyi Geceler";
+          }
+          document.getElementById("lbl_sonuc").innerHTML = sonuc;
+        </script>
+    </body>
+</html>
