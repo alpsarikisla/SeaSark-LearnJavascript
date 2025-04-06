@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM Kullanımı</title>
+</head>
+<body>
+    <label id="ekran"></label><br>
+    <label id="ekran2"></label>
+    <div id="kutu" style="background-color: aqua; min-height: 200px;"></div>
+    <script>
+        var genislik = screen.width;
+        var yukseklik = screen.height;
+        document.getElementById("ekran").innerHTML = "Genişlik = " + genislik + " px - Yükseklik = " + yukseklik + " px";
+        var kullanilabilirgenislik = screen.availWidth;
+        var kullanilanilabiliryukseklik = screen.availHeight;
+        document.getElementById("ekran2").innerHTML = "Genişlik = " + kullanilabilirgenislik + " px - Yükseklik = " + kullanilanilabiliryukseklik + " px";
+    </script>
+</body>
+</html>

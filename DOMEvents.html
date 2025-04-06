@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Event</title>
+</head>
+<body onload="page_load1()" onunload="page_unload1()">
+    <h2 onclick="this.innerText = 'Gıdıklamaaaaa!'"> Nabün? </h2>
+    <h2 onclick="metinDegistir(this)"> Nabün?</h2>
+    <label onclick="metinDegistir(this)">Label</label>
+    <p id="ekran"></p>
+    <button id="btn_goster">Tarih Göster</button>
+    <a href="https:www.google.com">Google'a git</a>
+    <br><br>
+    Lütfen Adınızı Giriniz
+    <!-- <input type="text" id="tb_isim" oninput="karakterBuyut()"> -->
+    <input type="text" id="tb_isim" onchange="karakterBuyut()">
+    <br>
+    <div onmouseover="mHover(this)" onmouseout="mUnHover(this)" onmousedown="mDown(this)" onmouseup="mUp(this)" style="background-color: mediumseagreen; width: 200px; height: 25px; padding: 50px; color: white;">
+        Selamlar Dostlar
+    </div>
+    <script>
+      function metinDegistir(nesne)
+      {
+        nesne.innerText = "Gıdıklama Dedik Ya";
+      }
+      document.getElementById("btn_goster").onclick = tarihGetir;
+      function tarihGetir()
+      {
+        document.getElementById("ekran").innerHTML= Date();
+      }
+      function page_load()
+      {
+        alert('Onload Çalıştı');
+      }
+      function page_unload()//Çalışmadı
+      {
+        alert('OnUnLoad Çalıştı')
+      }
+      function karakterBuyut()
+      {
+        var tb_isim = document.getElementById("tb_isim");
+        tb_isim.value = tb_isim.value.toUpperCase();
+      }
+      function mHover(nesne){
+        nesne.innerHTML = "De Get!!!!!!";
+      }
+      function mUnHover(nesne){
+        nesne.innerHTML = "Selamlar Dostlar";
+      }
+      function mDown(nesne)
+      {
+        nesne.style.backgroundColor = "OrangeRed";
+        nesne.innerHTML = "Gıdıklamaaaaa !!!";
+      }
+      function mUp(nesne)
+      {
+        nesne.style.backgroundColor = "mediumseagreen";
+        nesne.innerHTML = "Selamlar Dostlar";
+      }
+    </script>
+</body>
+</html>

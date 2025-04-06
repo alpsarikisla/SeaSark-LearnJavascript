@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM HTML Değiştirme</title>
+    <style>
+        .birinci{
+            padding: 25px;
+            background-color: orangered;
+            color: white;
+        }
+        .ikinci{
+            background-color: green;
+            font-size: 25pt;
+        }
+    </style>
+</head>
+<body>
+    <label id="lbl_sonuc" onclick="degistir()">İçinde bir yazı olsun</label><br>
+    <button type="button" onclick="document.getElementById('lbl_sonuc').style.color='red'">Kırmız Yap</button>
+    <div id="kutu" class="birinci">
+        İçerisinde Bir Yazı.
+    </div>
+    <button onclick="sinifEkleDegistir()">Sınıf Ekle Değiştir</button>
+    <script>
+        function degistir()
+        {
+                document.getElementById("lbl_sonuc").style.color="blue";
+        }
+        function sinifEkleDegistir()
+        {
+            var kutu = document.getElementById("kutu");
+            kutu.classList.remove("birinci");
+            kutu.classList.add("ikinci");
+        }
+    </script>
+</body>
+</html>

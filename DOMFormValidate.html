@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Form Doğrulama</title>
+</head>
+<body>
+    <form onsubmit="formDogrula()" method="post" name="formum">
+        İsim : <input type="text" name="tb_isim">
+        <input type="submit" value="Gönder">
+    </form>
+    <script>
+      function formDogrula()
+      {
+        var a = document.forms["formum"]["tb_isim"].value;
+        if(a == "")
+        {
+            alert("İsim boş bırakılamaz");
+            return false;
+        }
+      }
+    </script>
+</body>
+</html>

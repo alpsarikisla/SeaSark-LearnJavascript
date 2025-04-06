@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Koleksiyonları</title>
+</head>
+<body>
+    <p>Paragraf 1</p>
+    <label>Label 1</label>
+    <p>Paragraf 2</p>
+    <label>Label 2</label>
+    <p>Paragraf 3</p>
+    <label>Label 3</label>
+    <p>Paragraf 4</p>
+    <label>Label 4</label>
+    <p>Paragraf 5</p>
+    <label>Label 5</label>
+    <p>Paragraf 6</p>
+    <label>Label 6</label>
+    <br><br>
+    <h3 id="ekran"></h3>
+    <script>
+        //var paragraflar = document.getElementsByTagName("p");
+        //var ekran = document.getElementById("ekran");
+        //ekran.innerHTML = "Paragraf Sayısı " + paragraflar.length + " " + paragraflar[1].innerHTML;
+
+        var paragraflar = document.querySelectorAll("p");
+        var ekran = document.getElementById("ekran");
+        ekran.innerHTML = "Paragraf Sayısı " + paragraflar.length + " " + paragraflar[1].innerHTML;
+
+        for(var i = 0; i < paragraflar.length; i++)
+        {
+            if(i % 2 == 0)
+            {
+                paragraflar[i].style.color = "orangered";
+            }
+        }
+    </script>
+</body>
+</html>

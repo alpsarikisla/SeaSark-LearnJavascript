@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Islemleri</title>
+</head>
+<body>
+    <label id="ekran"></label><br>
+    <input type="button" value="Google'a Git =>" onclick="git('http://www.google.com')"><br>
+    <input type="button" value="<== Geri Git" onclick="window.history.back()">
+    <input type="button" value="İleri Git =>" onclick="window.history.forward()">
+    <script>
+        var ekran = document.getElementById("ekran");
+        ekran.innerHTML = "Sayfa Adresi = " + window.location.href;
+        ekran.innerHTML += "<br/> Host Name = " + window.location.hostname;
+        ekran.innerHTML += "<br/> Path = " + window.location.pathname;
+        ekran.innerHTML += "<br/> Protokol = " + window.location.protocol;
+        function git(adres){
+            window.location.assign(adres);
+        }
+    </script>
+</body>
+</html>

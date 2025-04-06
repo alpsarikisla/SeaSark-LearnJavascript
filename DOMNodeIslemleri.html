@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node Islemleri</title>
+</head>
+<body>
+    <div id="div1">
+        <p id="paragraf1"> Paragraf 1 </p>
+        <p id="paragraf2"> Paragraf 2 </p>
+    </div>
+    <script>
+        var paragraf = document.createElement("p");
+        var node = document.createTextNode("Ben Script ile oluşturuldum");
+        paragraf.appendChild(node);
+
+        var element = document.getElementById("div1");
+        //element.appendChild(paragraf);
+        var p1 = document.getElementById("paragraf1");
+        element.insertBefore(paragraf, p1);
+
+        var p2 = document.getElementById("paragraf2");
+        //p2.remove();
+        //element.removeChild(p2);
+
+        var metin = element.children[0].textContent;
+        //var metin = element.firstChild.innerHTML;
+        alert(metin);
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Kullanımı</title>
+</head>
+<body>
+    <h2>Document Object Model</h2>
+    <p>Döküman içerisindeki her nesnenin bir erişim noktası olduğu temeline dayanır</p>
+    <p> Etiketler, Sınıflar, idler bir erişim noktası oluşturur</p>
+    <label id="lbl_sonuc"></label><br>
+    
+    <label class="badge badge-primary">Label 1</label>
+    <label class="badge badge-primary">Label 2</label>
+    <label class="badge badge-primary">Label 3</label>
+
+    <span class="badge badge-primary">Span 1</span>
+    <span class="badge badge-primary">Span 2</span>
+    <span class="badge badge-primary">Span 3</span>
+
+    <script>
+        //getElementById
+        document.getElementById("lbl_sonuc").innerHTML = "Selam";
+        var lbl_sonuc = document.getElementById("lbl_sonuc");
+        lbl_sonuc.innerHTML = "Değişken olarak kullanıldım";
+
+        //getElementsByTagName
+        var paragraflar = document.getElementsByTagName("p");
+        lbl_sonuc.innerHTML = "İlk paragrafın metni " + paragraflar[0].innerHTML;
+
+        //getElementsByClassName
+        var labellar = document.getElementsByClassName("badge");
+        lbl_sonuc.innerHTML = "Label Metni = " +  labellar[1].innerHTML;
+
+        //querySelectorAll
+        var spanler = document.querySelectorAll("span.badge");
+        lbl_sonuc.innerHTML = spanler[1].innerHTML;
+    </script>
+</body>
+</html>

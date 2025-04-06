@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM Kullanımı</title>
+</head>
+<body>
+    <h2>Browser Object Model</h2>
+    <p>Window nesnesi ile browser hakkında bilgi almamızı sağlar</p>
+    <label id="ekran"></label><br>
+    <label id="ekran2"></label>
+    <div id="kutu" style="background-color: aqua; min-height: 200px;"></div>
+    <script>
+        var genislik = window.innerWidth;
+        var yukseklik = window.innerHeight;
+        document.getElementById("ekran").innerHTML = "Genişlik = " + genislik + " px - Yükseklik = " + yukseklik + " px";
+        var kutu = document.getElementById("kutu");
+        //kutu.style.width = genislik / 2 + "px";
+
+        ekranolcusuDegisti();
+        window.addEventListener("resize", ekranolcusuDegisti);
+        function ekranolcusuDegisti(){
+            var ekranyukseklik = window.innerHeight;
+            var ekrangenislik = window.innerWidth;
+            document.getElementById("ekran2").innerHTML = "Genişlik = " + ekrangenislik + " px - Yükseklik = " + ekranyukseklik + " px";
+            kutu.style.width = ekrangenislik / 2 + "px";
+        }
+    </script>
+</body>
+</html>

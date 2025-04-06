@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listener</title>
+</head>
+<body>
+    <button id="btn_yazdir">Yazdır</button>
+    <label id="lbl_ekran"></p>
+    <script>
+        //document.getElementById("btn_yazdir").addEventListener("click", tarihGoster);
+
+        function tarihGoster()
+        {
+            document.getElementById("lbl_ekran").innerHTML = Date();
+        }
+
+        var btn_yazdir = document.getElementById("btn_yazdir");
+        btn_yazdir.addEventListener("click", function() {
+            document.getElementById("lbl_ekran").innerHTML = Date();
+        });
+
+        btn_yazdir.addEventListener("click", selamVer);
+        btn_yazdir.removeEventListener("click", selamVer);
+        function selamVer()
+        {
+            alert("Selamlar ben İbrahim Yılmaz. Instagramda 15 milyon takipçim var")
+        }
+       
+    </script>
+</body>
+</html>

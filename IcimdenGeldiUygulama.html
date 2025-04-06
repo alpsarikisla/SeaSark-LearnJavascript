@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İçimden Geldi Uygulama</title>
+    <style>
+        ul,#tree{
+            list-style-type: none;
+            font-size: 25pt;
+        }
+        #tree{
+            padding: 0; margin: 0;
+        }
+        .caret
+        {
+            cursor: pointer;
+        }
+        .caret::before{
+            content: "\25B6";
+            display: inline-block;
+            margin-right: 6px;
+        }
+        .caret-down::before{
+            -ms-transform: rotate(90deg);
+            -webkit-transform: rotate(90deg);
+            transform:rotate(90deg);
+        }
+        .nested{
+            display: none;
+        }
+        .active{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h2>Tree View</h2>
+    <ul id="tree">
+        <li><span class="caret">İçecekler</span>
+            <ul class="nested">
+                <li>Su</li>
+                <li>Portakal Suyu</li>
+                <li>Kahve</li>
+                <li><span class="caret">Kola</span>
+                    <ul class="nested">
+                        <li>Kara Kola</li>
+                        <li>Sarı Kula</li>
+                        <li><span class="caret">Şeffaf Kula</span>
+                            <ul class="nested">
+                                <li>Niğde Gazozu</li>
+                                <li>Beyoğlu Gazozu</li>
+                                <li>Çamlıca Gazozu</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <script>
+        var toggler = document.getElementsByClassName("caret");
+        for(var i = 0; toggler.length; i++)
+        {
+            toggler[i].addEventListener("click", function(){
+                this.parentElement.querySelector(".nested").classList.toggle("active");
+                this.classList.toggle("caret-down");
+            });
+        }
+    </script>
+</body>
+</html>
